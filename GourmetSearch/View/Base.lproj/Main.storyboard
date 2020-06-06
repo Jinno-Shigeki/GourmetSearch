@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorite-->
+        <!--Foavarite-->
         <scene sceneID="7qg-G7-hqV">
             <objects>
                 <viewController id="ncZ-RE-8tC" customClass="SecondViewController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="576-nV-7m8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite" image="star.fill" catalog="system" selectedImage="star.fill" id="ANN-sd-m2c"/>
+                    <navigationItem key="navigationItem" title="Foavarite" id="y20-WI-xpN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBL-L2-DXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="556"/>
+            <point key="canvasLocation" x="2371.0144927536235" y="555.80357142857144"/>
         </scene>
-        <!--Home-->
+        <!--GourmetSearch-->
         <scene sceneID="ocp-aX-5VI">
             <objects>
                 <viewController id="ISP-0q-Kfd" customClass="FirstViewController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,11 +33,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="axU-Uv-TWI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="qQg-84-WFj"/>
+                    <navigationItem key="navigationItem" title="GourmetSearch" id="opM-6m-VrP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q98-7D-4k3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1463.768115942029" y="-175.44642857142856"/>
+            <point key="canvasLocation" x="2372.463768115942" y="-175.44642857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lCE-A4-UWA">
@@ -45,18 +45,59 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9n9-5q-Cl3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uky-jc-8lH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ISP-0q-Kfd" kind="relationship" relationship="viewControllers" id="nwr-Gu-gfE"/>
-                        <segue destination="ncZ-RE-8tC" kind="relationship" relationship="viewControllers" id="GvG-i3-J08"/>
+                        <segue destination="sk0-H9-dvg" kind="relationship" relationship="viewControllers" id="nwr-Gu-gfE"/>
+                        <segue destination="MAw-W9-cF0" kind="relationship" relationship="viewControllers" id="GvG-i3-J08"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSc-KF-pVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="553.62318840579712" y="-175.44642857142856"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Ms0-i7-jni">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sk0-H9-dvg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="qQg-84-WFj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Odl-ri-bPf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ISP-0q-Kfd" kind="relationship" relationship="rootViewController" id="mjO-EG-TeR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zty-2u-TbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462.3188405797102" y="-175.44642857142856"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="c6n-4Q-z6w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MAw-W9-cF0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star.fill" catalog="system" selectedImage="star.fill" id="ANN-sd-m2c"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3pm-9v-KlT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ncZ-RE-8tC" kind="relationship" relationship="rootViewController" id="X0s-6s-ZBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7i-1C-dEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460.8695652173915" y="555.80357142857144"/>
         </scene>
     </scenes>
     <resources>
