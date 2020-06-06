@@ -13,9 +13,13 @@
 		55538363248B42E9006D5B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55538361248B42E9006D5B7D /* Main.storyboard */; };
 		55538365248B42EB006D5B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55538364248B42EB006D5B7D /* Assets.xcassets */; };
 		55538368248B42EB006D5B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55538366248B42EB006D5B7D /* LaunchScreen.storyboard */; };
+		76FD69C363A43FB87528EE7B /* Pods_GourmetSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49634AB1F2235B1EB9BB6A6C /* Pods_GourmetSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05865FB615D28F37C16E1B96 /* Pods-GourmetSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetSearch.release.xcconfig"; path = "Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch.release.xcconfig"; sourceTree = "<group>"; };
+		0E11EF3292154DB1D302CE15 /* Pods-GourmetSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetSearch.debug.xcconfig"; path = "Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		49634AB1F2235B1EB9BB6A6C /* Pods_GourmetSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GourmetSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55538358248B42E9006D5B7D /* GourmetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553835B248B42E9006D5B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5553835D248B42E9006D5B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76FD69C363A43FB87528EE7B /* Pods_GourmetSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5553835A248B42E9006D5B7D /* GourmetSearch */,
 				55538359248B42E9006D5B7D /* Products */,
+				93931FDC696AE1019C39A635 /* Pods */,
+				BB3EE121E50D8932A390B649 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = GourmetSearch;
 			sourceTree = "<group>";
 		};
+		93931FDC696AE1019C39A635 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E11EF3292154DB1D302CE15 /* Pods-GourmetSearch.debug.xcconfig */,
+				05865FB615D28F37C16E1B96 /* Pods-GourmetSearch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB3EE121E50D8932A390B649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49634AB1F2235B1EB9BB6A6C /* Pods_GourmetSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5553836C248B42EB006D5B7D /* Build configuration list for PBXNativeTarget "GourmetSearch" */;
 			buildPhases = (
+				8905B0D0352EB62445B97ED8 /* [CP] Check Pods Manifest.lock */,
 				55538354248B42E9006D5B7D /* Sources */,
 				55538355248B42E9006D5B7D /* Frameworks */,
 				55538356248B42E9006D5B7D /* Resources */,
+				A09B797851B0A6336D56C5EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8905B0D0352EB62445B97ED8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GourmetSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A09B797851B0A6336D56C5EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55538354248B42E9006D5B7D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		5553836D248B42EB006D5B7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E11EF3292154DB1D302CE15 /* Pods-GourmetSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		5553836E248B42EB006D5B7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05865FB615D28F37C16E1B96 /* Pods-GourmetSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
