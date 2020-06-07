@@ -106,11 +106,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-5l-3Is">
-                                <rect key="frame" x="0.0" y="226" width="414" height="444"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-5l-3Is">
+                                <rect key="frame" x="0.0" y="226" width="414" height="587"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nJT-9l-ds3">
+                                <color key="backgroundColor" name="LightOrange"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yqV-0F-jwy">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -135,6 +135,7 @@
                         <barButtonItem key="backBarButtonItem" title=" 戻る" id="58h-VV-7jR"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryCollection" destination="8yc-5l-3Is" id="sKO-hw-Cp5"/>
                         <segue destination="ZEJ-w4-RuG" kind="show" id="94a-vk-0ve"/>
                     </connections>
                 </viewController>
@@ -247,13 +248,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BKM-V9-7zY"/>
+        <segue reference="son-pV-uX8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="LightOrange">
-            <color red="1" green="0.85282880067825317" blue="0.50690454244613647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.8529999852180481" blue="0.50700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
