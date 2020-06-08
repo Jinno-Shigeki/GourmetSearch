@@ -104,7 +104,7 @@
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="キーワード" translatesAutoresizingMaskIntoConstraints="NO" id="pfF-a1-Dct">
                                 <rect key="frame" x="0.0" y="121" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-5l-3Is">
                                 <rect key="frame" x="0.0" y="226" width="414" height="587"/>
@@ -112,13 +112,13 @@
                                 <color key="backgroundColor" name="LightOrange"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yqV-0F-jwy">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ixM-mq-OhD">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8nZ-7e-f2j">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -126,6 +126,10 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bvM-Hu-beb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" name="LightOrange"/>
@@ -136,6 +140,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryCollection" destination="8yc-5l-3Is" id="sKO-hw-Cp5"/>
+                        <outlet property="gourmetSearch" destination="pfF-a1-Dct" id="OYa-39-Gvf"/>
                         <segue destination="ZEJ-w4-RuG" kind="show" id="94a-vk-0ve"/>
                     </connections>
                 </viewController>
@@ -146,7 +151,7 @@
         <!--GourmetSearch-->
         <scene sceneID="XWK-IM-9tw">
             <objects>
-                <viewController id="ZEJ-w4-RuG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="ZEJ-w4-RuG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ano-u8-YI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +253,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="son-pV-uX8"/>
+        <segue reference="BKM-V9-7zY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>

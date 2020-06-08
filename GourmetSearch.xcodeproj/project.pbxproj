@@ -17,6 +17,8 @@
 		55538375248BE54E006D5B7D /* FirstViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55538374248BE54E006D5B7D /* FirstViewPresenter.swift */; };
 		55538378248BE6F8006D5B7D /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */; };
 		5553837A248BECF0006D5B7D /* CategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */; };
+		5553837C248CDD1C006D5B7D /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553837B248CDD1C006D5B7D /* Entity.swift */; };
+		55612D64248EA12E000C1A05 /* GourmetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55612D63248EA12E000C1A05 /* GourmetData.swift */; };
 		76FD69C363A43FB87528EE7B /* Pods_GourmetSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49634AB1F2235B1EB9BB6A6C /* Pods_GourmetSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		55538374248BE54E006D5B7D /* FirstViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenter.swift; sourceTree = "<group>"; };
 		55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
 		55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionCell.xib; sourceTree = "<group>"; };
+		5553837B248CDD1C006D5B7D /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		55612D63248EA12E000C1A05 /* GourmetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		55538373248B7EA6006D5B7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5553837B248CDD1C006D5B7D /* Entity.swift */,
+				55612D63248EA12E000C1A05 /* GourmetData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,10 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55538378248BE6F8006D5B7D /* CategoryCollectionCell.swift in Sources */,
+				55612D64248EA12E000C1A05 /* GourmetData.swift in Sources */,
 				55538370248B7E55006D5B7D /* SecondViewController.swift in Sources */,
 				55538360248B42E9006D5B7D /* FirstViewController.swift in Sources */,
 				5553835C248B42E9006D5B7D /* AppDelegate.swift in Sources */,
 				55538375248BE54E006D5B7D /* FirstViewPresenter.swift in Sources */,
+				5553837C248CDD1C006D5B7D /* Entity.swift in Sources */,
 				5553835E248B42E9006D5B7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

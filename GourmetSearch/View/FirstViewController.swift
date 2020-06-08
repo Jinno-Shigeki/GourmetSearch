@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
-class FirstViewController: UIViewController {
-
-    @IBOutlet weak var categoryCollection: UICollectionView!
+final class FirstViewController: UIViewController {
+    
+    @IBOutlet private weak var categoryCollection: UICollectionView!
+    @IBOutlet private weak var gourmetSearch: UISearchBar!
     
     var presenter = FirstViewPresenter()
     
@@ -18,18 +18,22 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         categoryCollection.delegate = self
         categoryCollection.dataSource = self
+        gourmetSearch.delegate = self
         categoryCollection.register(UINib(nibName: "CategoryCollectionCell", bundle: nil), forCellWithReuseIdentifier: "cell")
     }
 }
-//MARK: -
+//MARK: - UICollectionViewDelegate
 extension FirstViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.getGourmetData(word: presenter.category[indexPath.row])
+        print(presenter.category[indexPath.row])
+    }
 }
-//MARK: -
+//MARK: - UICollectionViewDataSource
 extension FirstViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-             return presenter.category.count
+            return presenter.category.count
         } else {
             return presenter.shopSystem.count
         }
@@ -52,13 +56,19 @@ extension FirstViewController: UICollectionViewDataSource {
         return 2
     }
     
+    
     func cellLayout() {
         let layer = UICollectionViewFlowLayout()
         layer.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layer.itemSize = CGSize(width: 120, height: 90)
         categoryCollection.collectionViewLayout = layer
     }
-    
 }
-
+//MARK: - UISearchBarDelegate
+extension FirstViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter.getGourmetData(word: gourmetSearch.text ?? "")
+        gourmetSearch.endEditing(true)
+    }
+}
 
