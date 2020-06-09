@@ -21,12 +21,21 @@ final class FirstViewController: UIViewController {
         gourmetSearch.delegate = self
         categoryCollection.register(UINib(nibName: "CategoryCollectionCell", bundle: nil), forCellWithReuseIdentifier: "cell")
     }
+    func nextScreen(_ searchText: String) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "ShopListVC") as! GourmetListViewController
+        nextVC.searchText = searchText
+         navigationController?.pushViewController(nextVC, animated: true)
+    }
 }
 //MARK: - UICollectionViewDelegate
 extension FirstViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.getGourmetData(word: presenter.category[indexPath.row])
-        print(presenter.category[indexPath.row])
+        if indexPath.section == 0 {
+            nextScreen(presenter.category[indexPath.row])
+        } else {
+            nextScreen(presenter.shopSystem[indexPath.row])
+        }
     }
 }
 //MARK: - UICollectionViewDataSource
@@ -67,8 +76,8 @@ extension FirstViewController: UICollectionViewDataSource {
 //MARK: - UISearchBarDelegate
 extension FirstViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        presenter.getGourmetData(word: gourmetSearch.text ?? "")
         gourmetSearch.endEditing(true)
+        nextScreen(searchBar.text ?? "dinner")
     }
 }
 

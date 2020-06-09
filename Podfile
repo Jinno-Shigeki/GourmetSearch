@@ -6,7 +6,8 @@ target 'GourmetSearch' do
   use_frameworks!
 
   pod 'Alamofire'
-
+  pod 'SDWebImage'
+  
   # Pods for GourmetSearch
 
 end
