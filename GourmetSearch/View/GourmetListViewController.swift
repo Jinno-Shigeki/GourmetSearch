@@ -33,7 +33,12 @@ class GourmetListViewController: UIViewController {
 }
 //MARK: - UITableViewDelegate
 extension GourmetListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextVC = storyboard.instantiateViewController(identifier: "ShopDetailVC") as! ShopDetailViewController
+        nextVC.shopData = presenter.gourmetData[indexPath.row]
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
 }
 //MARK: - UITableViewDataSource
 extension GourmetListViewController: UITableViewDataSource {
