@@ -27,8 +27,8 @@ class GourmetListViewController: UIViewController {
         gourmetSearch.delegate = self
         shopList.register(UINib(nibName: "ShopListCell", bundle: nil), forCellReuseIdentifier: "cell")
         presenter = GourmetListViewPresenter(view: self)
-        print(searchText)
-        presenter.getGourmetData(word: searchText)
+        gourmetSearch.text = searchText
+        presenter.getGourmetData(word: searchText, scroll: false)
     }
 }
 //MARK: - UITableViewDelegate
@@ -38,6 +38,13 @@ extension GourmetListViewController: UITableViewDelegate {
         let nextVC = storyboard.instantiateViewController(identifier: "ShopDetailVC") as! ShopDetailViewController
         nextVC.shopData = presenter.gourmetData[indexPath.row]
         navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let targetCell = presenter.gourmetData.count - indexPath.row
+        if presenter.gourmetData.count >= 20 && targetCell == 5 && presenter.apiItems >= 20 {
+            presenter.getGourmetData(word: searchText, scroll: true)
+        }
     }
 }
 //MARK: - UITableViewDataSource
@@ -59,7 +66,7 @@ extension GourmetListViewController: UITableViewDataSource {
 extension GourmetListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
-            presenter.getGourmetData(word: text)
+            presenter.getGourmetData(word: text, scroll: false)
             searchBar.endEditing(true)
         }
     }
