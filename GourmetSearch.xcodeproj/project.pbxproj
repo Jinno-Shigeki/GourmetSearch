@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5527B66E248F9C5700E9CF5D /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527B66D248F9C5700E9CF5D /* ShopDetailViewController.swift */; };
+		5527B671248FD3D500E9CF5D /* ShopDetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527B66F248FD3D500E9CF5D /* ShopDetailListCell.swift */; };
+		5527B672248FD3D500E9CF5D /* ShopDetailListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5527B670248FD3D500E9CF5D /* ShopDetailListCell.xib */; };
+		5527B674248FDCD100E9CF5D /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527B673248FDCD100E9CF5D /* StaticData.swift */; };
 		5553835C248B42E9006D5B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553835B248B42E9006D5B7D /* AppDelegate.swift */; };
 		5553835E248B42E9006D5B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553835D248B42E9006D5B7D /* SceneDelegate.swift */; };
 		55538360248B42E9006D5B7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553835F248B42E9006D5B7D /* FirstViewController.swift */; };
@@ -30,6 +34,10 @@
 		05865FB615D28F37C16E1B96 /* Pods-GourmetSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetSearch.release.xcconfig"; path = "Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch.release.xcconfig"; sourceTree = "<group>"; };
 		0E11EF3292154DB1D302CE15 /* Pods-GourmetSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetSearch.debug.xcconfig"; path = "Target Support Files/Pods-GourmetSearch/Pods-GourmetSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		49634AB1F2235B1EB9BB6A6C /* Pods_GourmetSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GourmetSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5527B66D248F9C5700E9CF5D /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		5527B66F248FD3D500E9CF5D /* ShopDetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailListCell.swift; sourceTree = "<group>"; };
+		5527B670248FD3D500E9CF5D /* ShopDetailListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopDetailListCell.xib; sourceTree = "<group>"; };
+		5527B673248FDCD100E9CF5D /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 		55538358248B42E9006D5B7D /* GourmetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553835B248B42E9006D5B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5553835D248B42E9006D5B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,12 +108,15 @@
 			children = (
 				5553835F248B42E9006D5B7D /* FirstViewController.swift */,
 				55612D65248EDA0A000C1A05 /* GourmetListViewController.swift */,
+				5527B66D248F9C5700E9CF5D /* ShopDetailViewController.swift */,
 				5553836F248B7E55006D5B7D /* SecondViewController.swift */,
 				55538361248B42E9006D5B7D /* Main.storyboard */,
 				55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */,
 				55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */,
 				55612D69248EDB7F000C1A05 /* ShopListCell.swift */,
 				55612D6A248EDB7F000C1A05 /* ShopListCell.xib */,
+				5527B66F248FD3D500E9CF5D /* ShopDetailListCell.swift */,
+				5527B670248FD3D500E9CF5D /* ShopDetailListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 			children = (
 				5553837B248CDD1C006D5B7D /* Entity.swift */,
 				55612D63248EA12E000C1A05 /* GourmetData.swift */,
+				5527B673248FDCD100E9CF5D /* StaticData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 			files = (
 				55538368248B42EB006D5B7D /* LaunchScreen.storyboard in Resources */,
 				5553837A248BECF0006D5B7D /* CategoryCollectionCell.xib in Resources */,
+				5527B672248FD3D500E9CF5D /* ShopDetailListCell.xib in Resources */,
 				55612D6C248EDB7F000C1A05 /* ShopListCell.xib in Resources */,
 				55538365248B42EB006D5B7D /* Assets.xcassets in Resources */,
 				55538363248B42E9006D5B7D /* Main.storyboard in Resources */,
@@ -267,12 +280,15 @@
 				55612D64248EA12E000C1A05 /* GourmetData.swift in Sources */,
 				55612D68248EDB47000C1A05 /* GourmetListViewPresenter.swift in Sources */,
 				55538370248B7E55006D5B7D /* SecondViewController.swift in Sources */,
+				5527B66E248F9C5700E9CF5D /* ShopDetailViewController.swift in Sources */,
 				55538360248B42E9006D5B7D /* FirstViewController.swift in Sources */,
+				5527B674248FDCD100E9CF5D /* StaticData.swift in Sources */,
 				55612D6B248EDB7F000C1A05 /* ShopListCell.swift in Sources */,
 				5553835C248B42E9006D5B7D /* AppDelegate.swift in Sources */,
 				55538375248BE54E006D5B7D /* FirstViewPresenter.swift in Sources */,
 				5553837C248CDD1C006D5B7D /* Entity.swift in Sources */,
 				5553835E248B42E9006D5B7D /* SceneDelegate.swift in Sources */,
+				5527B671248FD3D500E9CF5D /* ShopDetailListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
