@@ -19,6 +19,10 @@
 		5553837A248BECF0006D5B7D /* CategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */; };
 		5553837C248CDD1C006D5B7D /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553837B248CDD1C006D5B7D /* Entity.swift */; };
 		55612D64248EA12E000C1A05 /* GourmetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55612D63248EA12E000C1A05 /* GourmetData.swift */; };
+		55612D66248EDA0A000C1A05 /* GourmetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55612D65248EDA0A000C1A05 /* GourmetListViewController.swift */; };
+		55612D68248EDB47000C1A05 /* GourmetListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55612D67248EDB47000C1A05 /* GourmetListViewPresenter.swift */; };
+		55612D6B248EDB7F000C1A05 /* ShopListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55612D69248EDB7F000C1A05 /* ShopListCell.swift */; };
+		55612D6C248EDB7F000C1A05 /* ShopListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55612D6A248EDB7F000C1A05 /* ShopListCell.xib */; };
 		76FD69C363A43FB87528EE7B /* Pods_GourmetSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49634AB1F2235B1EB9BB6A6C /* Pods_GourmetSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,10 @@
 		55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionCell.xib; sourceTree = "<group>"; };
 		5553837B248CDD1C006D5B7D /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		55612D63248EA12E000C1A05 /* GourmetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetData.swift; sourceTree = "<group>"; };
+		55612D65248EDA0A000C1A05 /* GourmetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetListViewController.swift; sourceTree = "<group>"; };
+		55612D67248EDB47000C1A05 /* GourmetListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetListViewPresenter.swift; sourceTree = "<group>"; };
+		55612D69248EDB7F000C1A05 /* ShopListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListCell.swift; sourceTree = "<group>"; };
+		55612D6A248EDB7F000C1A05 /* ShopListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +99,13 @@
 			isa = PBXGroup;
 			children = (
 				5553835F248B42E9006D5B7D /* FirstViewController.swift */,
+				55612D65248EDA0A000C1A05 /* GourmetListViewController.swift */,
 				5553836F248B7E55006D5B7D /* SecondViewController.swift */,
 				55538361248B42E9006D5B7D /* Main.storyboard */,
 				55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */,
 				55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */,
+				55612D69248EDB7F000C1A05 /* ShopListCell.swift */,
+				55612D6A248EDB7F000C1A05 /* ShopListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				55538374248BE54E006D5B7D /* FirstViewPresenter.swift */,
+				55612D67248EDB47000C1A05 /* GourmetListViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -195,6 +207,7 @@
 			files = (
 				55538368248B42EB006D5B7D /* LaunchScreen.storyboard in Resources */,
 				5553837A248BECF0006D5B7D /* CategoryCollectionCell.xib in Resources */,
+				55612D6C248EDB7F000C1A05 /* ShopListCell.xib in Resources */,
 				55538365248B42EB006D5B7D /* Assets.xcassets in Resources */,
 				55538363248B42E9006D5B7D /* Main.storyboard in Resources */,
 			);
@@ -250,9 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55538378248BE6F8006D5B7D /* CategoryCollectionCell.swift in Sources */,
+				55612D66248EDA0A000C1A05 /* GourmetListViewController.swift in Sources */,
 				55612D64248EA12E000C1A05 /* GourmetData.swift in Sources */,
+				55612D68248EDB47000C1A05 /* GourmetListViewPresenter.swift in Sources */,
 				55538370248B7E55006D5B7D /* SecondViewController.swift in Sources */,
 				55538360248B42E9006D5B7D /* FirstViewController.swift in Sources */,
+				55612D6B248EDB7F000C1A05 /* ShopListCell.swift in Sources */,
 				5553835C248B42E9006D5B7D /* AppDelegate.swift in Sources */,
 				55538375248BE54E006D5B7D /* FirstViewPresenter.swift in Sources */,
 				5553837C248CDD1C006D5B7D /* Entity.swift in Sources */,
