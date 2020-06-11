@@ -13,4 +13,5 @@ struct StaticData {
     static let address = "住所"
     static let tel = "電話番号"
     static let access = "交通手段"
+    static let placeholder = "キーワードを入力して下さい"
 }
