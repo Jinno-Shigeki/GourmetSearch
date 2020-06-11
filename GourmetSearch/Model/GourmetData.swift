@@ -22,8 +22,8 @@ struct GourmetData {
         self.address = rest.address
         self.opentime = rest.opentime
         self.tel = rest.tel
-        self.shopImage = rest.image_url.shop_image1
+        self.shopImage = rest.image_url.shop_image1 
         self.location = "[\(rest.code.prefname)] \(rest.access.station) \(rest.access.line) \(rest.access.walk)分"
-        self.budget = "平均予算 ¥\(rest.budget)"
+        self.budget = "⭐︎ \(rest.budgetValue) ☀︎ \(rest.lunchValue)"
     }
 }

@@ -77,7 +77,7 @@ extension FirstViewController: UICollectionViewDataSource {
 extension FirstViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         gourmetSearch.endEditing(true)
-        nextScreen(searchBar.text ?? "dinner")
+        nextScreen(searchBar.text ?? "")
     }
 }
 

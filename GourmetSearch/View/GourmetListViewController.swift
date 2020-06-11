@@ -40,10 +40,10 @@ extension GourmetListViewController: UITableViewDelegate {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let targetCell = presenter.gourmetData.count - indexPath.row
-        if presenter.gourmetData.count >= 20 && targetCell == 5 && presenter.apiItems >= 20 {
-            presenter.getGourmetData(word: searchText, scroll: true)
+        if presenter.gourmetData.count >= 20 && targetCell == 3 && presenter.apiItems >= 20{
+            presenter.getGourmetData(word: gourmetSearch.text ?? "", scroll: true)
         }
     }
 }
@@ -65,13 +65,15 @@ extension GourmetListViewController: UITableViewDataSource {
 //MARK: -
 extension GourmetListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let text = searchBar.text {
-            presenter.getGourmetData(word: text, scroll: false)
+        if searchBar.text != "" {
+            presenter.getGourmetData(word: searchBar.text!, scroll: false)
             searchBar.endEditing(true)
+        } else {
+            searchBar.placeholder = StaticData.placeholder
         }
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
+        searchBar.text?.removeAll()
         searchBar.endEditing(true)
     }
 }
