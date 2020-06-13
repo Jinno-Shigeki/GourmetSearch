@@ -12,7 +12,7 @@
         <!--Foavarite-->
         <scene sceneID="7qg-G7-hqV">
             <objects>
-                <viewController id="ncZ-RE-8tC" customClass="SecondViewController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ncZ-RE-8tC" customClass="FavoriteViewController" customModule="GourmetSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IgV-Gj-YHd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,8 +38,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Foavarite" id="y20-WI-xpN">
                         <barButtonItem key="backBarButtonItem" title="戻る" id="dEd-v0-wje"/>
+                        <barButtonItem key="rightBarButtonItem" title="編集" style="plain" id="MIe-Nm-cfI">
+                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="favoriteList" destination="8No-Jn-Npw" id="ffL-oY-o1l"/>
                         <segue destination="GNC-Eg-knH" kind="show" id="son-pV-uX8"/>
                     </connections>
                 </viewController>
@@ -59,6 +63,9 @@
                                 <rect key="frame" x="348" y="96" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="registerBookmark:" destination="GNC-Eg-knH" eventType="touchUpInside" id="zBL-Nr-NJt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お気に入り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-5v-tZX">
                                 <rect key="frame" x="253" y="101" width="87" height="21"/>
@@ -102,6 +109,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="GourmetSearch" id="jNG-om-DR6"/>
                     <connections>
+                        <outlet property="bookmarkButton" destination="zDm-C7-FIf" id="Phh-rV-1WP"/>
                         <outlet property="shopDetailList" destination="Iwv-kF-lWX" id="k8m-N1-Ftq"/>
                         <outlet property="shopImage" destination="UMQ-aF-A4C" id="dIR-eU-jjw"/>
                         <outlet property="shopName" destination="cOH-b5-5Cb" id="fiK-Lp-d9l"/>
@@ -274,7 +282,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BKM-V9-7zY"/>
+        <segue reference="son-pV-uX8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>

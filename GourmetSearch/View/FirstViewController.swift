@@ -20,12 +20,22 @@ final class FirstViewController: UIViewController {
         categoryCollection.dataSource = self
         gourmetSearch.delegate = self
         categoryCollection.register(UINib(nibName: "CategoryCollectionCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        if UserDefaults.standard.string(forKey: "UserID") == nil {
+            CreateUsers()
+        }
     }
+ 
     func nextScreen(_ searchText: String) {
         let storyboard: UIStoryboard = self.storyboard!
         let nextVC = storyboard.instantiateViewController(withIdentifier: "ShopListVC") as! GourmetListViewController
         nextVC.searchText = searchText
          navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func CreateUsers (){
+        let id = presenter.createID()
+        presenter.sendID(id: id)
+        UserDefaults.standard.set(id, forKey: "UserID")
     }
 }
 //MARK: - UICollectionViewDelegate

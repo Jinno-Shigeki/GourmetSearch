@@ -30,6 +30,11 @@ class GourmetListViewController: UIViewController {
         gourmetSearch.text = searchText
         presenter.getGourmetData(word: searchText, scroll: false)
     }
+    
+    private func loadShopImage(row: Int, cell: ShopListCell) {
+            let shopImageURL = URL(string: presenter.gourmetData[row].shopImage)
+            cell.shopImage.sd_setImage(with: shopImageURL)
+    }
 }
 //MARK: - UITableViewDelegate
 extension GourmetListViewController: UITableViewDelegate {
@@ -84,10 +89,4 @@ extension GourmetListViewController: GourmetListViewProtocol {
         shopList.reloadData()
     }
 }
-//MARK: - func
-extension GourmetListViewController {
-    private func loadShopImage(row: Int, cell: ShopListCell) {
-        let shopImageURL = URL(string: presenter.gourmetData[row].shopImage)
-        cell.shopImage.sd_setImage(with: shopImageURL)
-    }
-}
+

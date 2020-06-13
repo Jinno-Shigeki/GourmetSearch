@@ -11,13 +11,16 @@
 		5527B671248FD3D500E9CF5D /* ShopDetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527B66F248FD3D500E9CF5D /* ShopDetailListCell.swift */; };
 		5527B672248FD3D500E9CF5D /* ShopDetailListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5527B670248FD3D500E9CF5D /* ShopDetailListCell.xib */; };
 		5527B674248FDCD100E9CF5D /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527B673248FDCD100E9CF5D /* StaticData.swift */; };
+		552E265424921893005F252E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552E265324921893005F252E /* GoogleService-Info.plist */; };
+		552E265624921CB0005F252E /* FavoriteViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E265524921CB0005F252E /* FavoriteViewPresenter.swift */; };
+		552E265824921D90005F252E /* ShopDetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E265724921D90005F252E /* ShopDetailViewPresenter.swift */; };
 		5553835C248B42E9006D5B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553835B248B42E9006D5B7D /* AppDelegate.swift */; };
 		5553835E248B42E9006D5B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553835D248B42E9006D5B7D /* SceneDelegate.swift */; };
 		55538360248B42E9006D5B7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553835F248B42E9006D5B7D /* FirstViewController.swift */; };
 		55538363248B42E9006D5B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55538361248B42E9006D5B7D /* Main.storyboard */; };
 		55538365248B42EB006D5B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55538364248B42EB006D5B7D /* Assets.xcassets */; };
 		55538368248B42EB006D5B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55538366248B42EB006D5B7D /* LaunchScreen.storyboard */; };
-		55538370248B7E55006D5B7D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553836F248B7E55006D5B7D /* SecondViewController.swift */; };
+		55538370248B7E55006D5B7D /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553836F248B7E55006D5B7D /* FavoriteViewController.swift */; };
 		55538375248BE54E006D5B7D /* FirstViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55538374248BE54E006D5B7D /* FirstViewPresenter.swift */; };
 		55538378248BE6F8006D5B7D /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */; };
 		5553837A248BECF0006D5B7D /* CategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */; };
@@ -38,6 +41,9 @@
 		5527B66F248FD3D500E9CF5D /* ShopDetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailListCell.swift; sourceTree = "<group>"; };
 		5527B670248FD3D500E9CF5D /* ShopDetailListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopDetailListCell.xib; sourceTree = "<group>"; };
 		5527B673248FDCD100E9CF5D /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
+		552E265324921893005F252E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		552E265524921CB0005F252E /* FavoriteViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewPresenter.swift; sourceTree = "<group>"; };
+		552E265724921D90005F252E /* ShopDetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewPresenter.swift; sourceTree = "<group>"; };
 		55538358248B42E9006D5B7D /* GourmetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553835B248B42E9006D5B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5553835D248B42E9006D5B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +52,7 @@
 		55538364248B42EB006D5B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55538367248B42EB006D5B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55538369248B42EB006D5B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5553836F248B7E55006D5B7D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5553836F248B7E55006D5B7D /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		55538374248BE54E006D5B7D /* FirstViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenter.swift; sourceTree = "<group>"; };
 		55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
 		55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionCell.xib; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 				55538364248B42EB006D5B7D /* Assets.xcassets */,
 				55538366248B42EB006D5B7D /* LaunchScreen.storyboard */,
 				55538369248B42EB006D5B7D /* Info.plist */,
+				552E265324921893005F252E /* GoogleService-Info.plist */,
 			);
 			path = GourmetSearch;
 			sourceTree = "<group>";
@@ -109,7 +116,7 @@
 				5553835F248B42E9006D5B7D /* FirstViewController.swift */,
 				55612D65248EDA0A000C1A05 /* GourmetListViewController.swift */,
 				5527B66D248F9C5700E9CF5D /* ShopDetailViewController.swift */,
-				5553836F248B7E55006D5B7D /* SecondViewController.swift */,
+				5553836F248B7E55006D5B7D /* FavoriteViewController.swift */,
 				55538361248B42E9006D5B7D /* Main.storyboard */,
 				55538376248BE6F8006D5B7D /* CategoryCollectionCell.swift */,
 				55538377248BE6F8006D5B7D /* CategoryCollectionCell.xib */,
@@ -126,6 +133,8 @@
 			children = (
 				55538374248BE54E006D5B7D /* FirstViewPresenter.swift */,
 				55612D67248EDB47000C1A05 /* GourmetListViewPresenter.swift */,
+				552E265724921D90005F252E /* ShopDetailViewPresenter.swift */,
+				552E265524921CB0005F252E /* FavoriteViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 				55612D6C248EDB7F000C1A05 /* ShopListCell.xib in Resources */,
 				55538365248B42EB006D5B7D /* Assets.xcassets in Resources */,
 				55538363248B42E9006D5B7D /* Main.storyboard in Resources */,
+				552E265424921893005F252E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +289,11 @@
 				55612D66248EDA0A000C1A05 /* GourmetListViewController.swift in Sources */,
 				55612D64248EA12E000C1A05 /* GourmetData.swift in Sources */,
 				55612D68248EDB47000C1A05 /* GourmetListViewPresenter.swift in Sources */,
-				55538370248B7E55006D5B7D /* SecondViewController.swift in Sources */,
+				55538370248B7E55006D5B7D /* FavoriteViewController.swift in Sources */,
 				5527B66E248F9C5700E9CF5D /* ShopDetailViewController.swift in Sources */,
 				55538360248B42E9006D5B7D /* FirstViewController.swift in Sources */,
+				552E265624921CB0005F252E /* FavoriteViewPresenter.swift in Sources */,
+				552E265824921D90005F252E /* ShopDetailViewPresenter.swift in Sources */,
 				5527B674248FDCD100E9CF5D /* StaticData.swift in Sources */,
 				55612D6B248EDB7F000C1A05 /* ShopListCell.swift in Sources */,
 				5553835C248B42E9006D5B7D /* AppDelegate.swift in Sources */,
