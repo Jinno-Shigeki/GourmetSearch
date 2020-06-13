@@ -42,38 +42,38 @@ extension Rest {
         }
     }
 }
+
+struct ImageUrl: Decodable {
+    let shop_image1: String
+}
+
+struct Access: Decodable {
+    let line: String
+    let station: String
+    let walk: String
+}
+
+struct Code: Decodable {
+    let prefname: String
+}
+
+enum StringOrInt: Decodable {
+    case str(String)
+    case int(Int)
     
-    struct ImageUrl: Decodable {
-        let shop_image1: String
-    }
-    
-    struct Access: Decodable {
-        let line: String
-        let station: String
-        let walk: String
-    }
-    
-    struct Code: Decodable {
-        let prefname: String
-    }
-    
-    enum StringOrInt: Decodable {
-        case str(String)
-        case int(Int)
-        
-        init(from decoder: Decoder) throws {
-            if let value = try? decoder.singleValueContainer().decode(Int.self){
-                self = .int(value)
-                return
-            }
-            if let value = try? decoder.singleValueContainer().decode(String.self){
-                self = .str(value)
-                return
-            }
-            throw error.missingValue
+    init(from decoder: Decoder) throws {
+        if let value = try? decoder.singleValueContainer().decode(Int.self){
+            self = .int(value)
+            return
         }
-        enum error: Error {
-            case missingValue
+        if let value = try? decoder.singleValueContainer().decode(String.self){
+            self = .str(value)
+            return
+        }
+        throw error.missingValue
+    }
+    enum error: Error {
+        case missingValue
     }
 }
 

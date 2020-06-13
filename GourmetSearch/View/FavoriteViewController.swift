@@ -20,8 +20,8 @@ class FavoriteViewController: UIViewController {
         super.viewDidLoad()
         favoriteList.delegate = self
         favoriteList.dataSource = self
-       // favoriteList.allowsMultipleSelectionDuringEditing = true
-       // navigationItem.rightBarButtonItem = editButtonItem
+        // favoriteList.allowsMultipleSelectionDuringEditing = true
+        // navigationItem.rightBarButtonItem = editButtonItem
         presenter = FavoriteViewPresenter(view: self)
         favoriteList.register(UINib(nibName: "ShopListCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
@@ -30,10 +30,10 @@ class FavoriteViewController: UIViewController {
             presenter.loadBookmark(id: userId)
         }
     }
-//    override func setEditing(_ editing: Bool, animated: Bool) {
-//         super.setEditing(editing, animated: animated)
-//        favoriteList.isEditing = editing
-//    }
+    //    override func setEditing(_ editing: Bool, animated: Bool) {
+    //         super.setEditing(editing, animated: animated)
+    //        favoriteList.isEditing = editing
+    //    }
 }
 //MARK: - UITableViewDelegate
 extension FavoriteViewController: UITableViewDelegate {

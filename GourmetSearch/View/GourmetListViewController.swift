@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 protocol GourmetListViewProtocol {
-   func reloadData()
+    func reloadData()
 }
 
 class GourmetListViewController: UIViewController {
@@ -32,8 +32,8 @@ class GourmetListViewController: UIViewController {
     }
     
     private func loadShopImage(row: Int, cell: ShopListCell) {
-            let shopImageURL = URL(string: presenter.gourmetData[row].shopImage)
-            cell.shopImage.sd_setImage(with: shopImageURL)
+        let shopImageURL = URL(string: presenter.gourmetData[row].shopImage)
+        cell.shopImage.sd_setImage(with: shopImageURL)
     }
 }
 //MARK: - UITableViewDelegate
@@ -45,7 +45,7 @@ extension GourmetListViewController: UITableViewDelegate {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let targetCell = presenter.gourmetData.count - indexPath.row
         if presenter.gourmetData.count >= 20 && targetCell == 3 && presenter.apiItems >= 20{
             presenter.getGourmetData(word: gourmetSearch.text ?? "", scroll: true)

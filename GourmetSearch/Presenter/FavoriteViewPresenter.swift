@@ -13,10 +13,10 @@ class FavoriteViewPresenter {
     let db = Firestore.firestore()
     var shopData: [GourmetData] = []
     private let delegate: FavoriteViewProtocol
-       
-       init(view: FavoriteViewProtocol) {
-           delegate = view
-       }
+    
+    init(view: FavoriteViewProtocol) {
+        delegate = view
+    }
     
     func loadBookmark(id: String) {
         updateShopData()

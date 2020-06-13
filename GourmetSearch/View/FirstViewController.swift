@@ -24,12 +24,12 @@ final class FirstViewController: UIViewController {
             CreateUsers()
         }
     }
- 
+    
     func nextScreen(_ searchText: String) {
         let storyboard: UIStoryboard = self.storyboard!
         let nextVC = storyboard.instantiateViewController(withIdentifier: "ShopListVC") as! GourmetListViewController
         nextVC.searchText = searchText
-         navigationController?.pushViewController(nextVC, animated: true)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func CreateUsers (){
