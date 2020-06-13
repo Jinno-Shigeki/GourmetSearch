@@ -10,7 +10,10 @@ import UIKit
 import SDWebImage
 class ShopDetailViewController: UIViewController {
     
+    var presenter = ShopDetailViewPresenter()
     var shopData: GourmetData?
+    
+    @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet private weak var shopImage: UIImageView!
     @IBOutlet private weak var shopName: UILabel!
     @IBOutlet private weak var shopDetailList: UITableView!
@@ -21,12 +24,16 @@ class ShopDetailViewController: UIViewController {
         shopDetailList.register(UINib(nibName: "ShopDetailListCell", bundle: nil), forCellReuseIdentifier: "cell")
         shopName.text = shopData?.name
         loadShopImage()
-        super.viewDidLoad()
-        
     }
+    
     func loadShopImage() {
         let imageURL = URL(string: shopData?.shopImage ?? "")
         shopImage.sd_setImage(with: imageURL)
+    }
+    @IBAction func registerBookmark(_ sender: Any) {
+        if let shopData = shopData, let user = UserDefaults.standard.string(forKey: "UserID") {
+            presenter.sendShopData(data: shopData, id: user)
+        }
     }
 }
 //MARK: -

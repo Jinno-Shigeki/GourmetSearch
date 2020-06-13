@@ -7,7 +7,8 @@ target 'GourmetSearch' do
 
   pod 'Alamofire'
   pod 'SDWebImage'
-  
+  pod 'Firebase/Firestore'  
+
   # Pods for GourmetSearch
 
 end
