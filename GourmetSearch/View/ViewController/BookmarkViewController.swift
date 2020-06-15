@@ -12,7 +12,7 @@ protocol FavoriteViewProtocol {
     func reloadData()
 }
 final class BookmarkViewController: UIViewController {
-    var presenter: FavoriteViewPresenter!
+    var presenter: BookmarkViewPresenter!
     var userID = ""
     @IBOutlet private weak var favoriteList: UITableView!
     
@@ -21,7 +21,7 @@ final class BookmarkViewController: UIViewController {
         favoriteList.delegate = self
         favoriteList.dataSource = self
         navigationBarLayout()
-        presenter = FavoriteViewPresenter(view: self)
+        presenter = BookmarkViewPresenter(view: self)
         favoriteList.register(UINib(nibName: "ShopListCell", bundle: nil), forCellReuseIdentifier: "cell")
         userID = UserDefaults.standard.string(forKey: "UserID")!
     }

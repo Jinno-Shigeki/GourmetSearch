@@ -66,21 +66,24 @@ extension ShopDetailViewController: UITableViewDelegate {
 //MARK: -
 extension ShopDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopDetailListCell
-        if indexPath.row == 0 {
+        if indexPath.row == 0{
+            cell.detailTitle.text = StaticData.shopName
+            cell.titleDetail.text = shopData?.name
+        } else if indexPath.row == 1 {
             cell.detailTitle.text = StaticData.opentime
             cell.titleDetail.text = shopData?.opentime
-        } else if indexPath.row == 1 {
+        } else if indexPath.row == 2 {
             cell.detailTitle.text = StaticData.access
             cell.titleDetail.text = shopData?.location
-        } else if indexPath.row == 2 {
+        } else if indexPath.row == 3 {
             cell.detailTitle.text = StaticData.address
             cell.titleDetail.text = shopData?.address
-        } else if indexPath.row == 3 {
+        } else if indexPath.row == 4 {
             cell.detailTitle.text = StaticData.tel
             cell.titleDetail.text = shopData?.tel
         }

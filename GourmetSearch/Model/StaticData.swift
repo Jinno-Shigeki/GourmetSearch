@@ -9,6 +9,7 @@
 import Foundation
 
 struct StaticData {
+    static let shopName = "名称"
     static let opentime = "営業時間"
     static let address = "住所"
     static let tel = "電話番号"
