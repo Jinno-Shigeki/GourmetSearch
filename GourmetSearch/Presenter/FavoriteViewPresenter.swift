@@ -22,7 +22,7 @@ class FavoriteViewPresenter {
         updateShopData()
         db.collection("User").document("\(id)").collection("Bookmark").getDocuments() { (querySnapshot, err) in
             if let err = err {
-                print("Loading error")
+                print(err)
             } else {
                 for document in querySnapshot!.documents{
                     self.shopData.append(GourmetData(document: document))
@@ -35,7 +35,7 @@ class FavoriteViewPresenter {
     func deleteBookmark(id: String, rowNumber: Int) {
         db.collection("User").document("\(id)").collection("Bookmark").document("\(shopData[rowNumber].documentID)").delete() { (err) in
             if let err = err {
-                print("missing delete")
+                print(err)
             } else {
                 print("delete is succseed")
             }
