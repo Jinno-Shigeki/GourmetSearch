@@ -15,10 +15,9 @@ class ShopDetailViewPresenter {
     func sendShopData(data: GourmetData, id: String) {
         db.collection("User").document(id).collection("Bookmark").addDocument(data: ["name": data.name, "address": data.address, "opentime": data.opentime, "tel": data.tel, "shopImage": data.shopImage, "location": data.location, "budget": data.budget]) { (err) in
             if let err = err {
-                print("adding error")
+                print(err)
             } else {
                 print("complete!")
-                let name: String
             }
         }
     }
