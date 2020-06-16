@@ -10,3 +10,4 @@ APIにAlamofireを使い、Decodableでデータを読み取っています。AP
 Firebaseを使用して、ブックマーク機能の搭載をしました。また、同じお店が２度登録されないように、ブックマークボタンを設計しています。
 
 #　デモ動画
+https://github.com/Jinno-Shigeki/GourmetSearch/issues/14#issue-639362618
